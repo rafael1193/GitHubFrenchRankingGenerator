@@ -19,8 +19,8 @@ def main(argv):
     ciudad.addFilter("followers", ">1")
     ciudad.getCityUsers()
 
-    ciudad.export(os.path.abspath("jsontemplate/template"),os.path.abspath(argv[1]+".json"), "public", data=extraData)
-    ciudad.export(os.path.abspath("jsontemplate/template2"),os.path.abspath(argv[1]+".md"), "public", data=extraData)
+    ciudad.export(os.path.abspath("templates/template_json"),os.path.abspath(argv[1]+".json"), "public", data=extraData)
+    ciudad.export(os.path.abspath("templates/template_md"),os.path.abspath(argv[1]+".md"), "public", data=extraData)
     ciudad.configToJson(os.path.abspath(argv[0]))
 
 if __name__ == "__main__":

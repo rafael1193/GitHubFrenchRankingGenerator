@@ -31,8 +31,8 @@ def main():
     for c in parsedArgs.city:
         region.addCity(c)
 
-    region.export(os.path.abspath("jsontemplate/template"),os.path.abspath(parsedArgs.output+".json"), "public", data=extraData, limit=100)
-    region.export(os.path.abspath("jsontemplate/template2"),os.path.abspath(parsedArgs.output+".md"), "public", data=extraData, limit=100)
+    region.export(os.path.abspath("templates/template_json"),os.path.abspath(parsedArgs.output+".json"), "public", data=extraData, limit=100)
+    region.export(os.path.abspath("templates/template_md"),os.path.abspath(parsedArgs.output+".md"), "public", data=extraData, limit=100)
 
 
 if __name__ == "__main__":

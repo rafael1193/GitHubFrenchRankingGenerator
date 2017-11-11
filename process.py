@@ -3,15 +3,17 @@
 import os
 import sys
 import datetime
+import locale
 from githubcity.ghcity import *
 
 def main(argv):
+    locale.setlocale(locale.LC_ALL, 'fr_FR')
     idGH = os.environ.get('GH_ID')
     secretGH = os.environ.get('GH_SECRET')
     ciudad = GitHubCity(idGH, secretGH)
     ciudad.readConfigFromJSON(argv[0])
     extraData = {
-        "date": datetime.datetime.now().strftime("%I:%M%p-%B-%d-%Y"),
+        "date": datetime.datetime.now().strftime(locale.nl_langinfo(locale.D_FMT)),
         "city": ciudad.city
     }
     ciudad.calculateBestIntervals()

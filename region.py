@@ -3,6 +3,7 @@
 import os
 import sys
 import datetime
+import locale
 from githubcity.ghregion import *
 from argparse import ArgumentParser
 
@@ -18,12 +19,13 @@ def read_arguments():
     return parser
 
 def main():
+    locale.setlocale(locale.LC_ALL, 'fr_FR')
     args = read_arguments()
     parsedArgs = args.parse_args()
 
     region = GitHubRegion()
     extraData = {
-        "date": datetime.datetime.now().strftime("%I:%M%p-%B-%d-%Y"),
+        "date": datetime.datetime.now().strftime(locale.nl_langinfo(locale.D_FMT)),
         "city": parsedArgs.region
     }
 

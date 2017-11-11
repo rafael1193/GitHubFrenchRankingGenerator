@@ -1,6 +1,6 @@
-# GH-Spanish-Ranking
+# GitHub French Ranking Generator
 
-This repository contains the configuration files to generate the GitHub rankings of Spain.
+This repository contains the configuration files to generate the GitHub rankings of France.
 
 [GitHubCity](https://github.com/iblancasa/GitHubCity) is used to generate the rankings.
 
@@ -16,13 +16,16 @@ pip install -r requirements.txt
 
 ## Where are the results?
 
-You can find the results in [this repository](https://github.com/iblancasa/ghrankings).
+You can find the results in [this repository](https://github.com/rafael1193/GitHubRankingsFrance).
 
 # License
+
+This work is based on Israel Blancas' GitHubSpanishRankingGenerator software released under the MIT license.
 
 ## The MIT License (MIT)
 
 ```
+Copyright (c) 2017 Rafael Bailon-Ruiz
 Copyright (c) 2015-2017 Israel Blancas
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -1,17 +1,15 @@
-# Ranking {{extraData.city}}
+# Classement {{extraData.city}}
 
-Generado {{extraData.date}}.
+_du {{extraData.date}}_
 
-El orden viene dado por las contribuciones públicas. Para aparecer en este ránking hay que tener, al menos, un repositorio público y un seguidor.
+Ce classement a été generé par [Rafael Bailon-Ruiz @rafael1193](https://github.com/rafael1193/) [(Twitter)](https://twitter.com/rafael1193) à partir des templates disponibles sur [GitHubFrenchRankingGenerator](https://github.com/rafael1193/GitHubFrenchRankingGenerator).
 
-Estos ránkings se suelen generar una vez a la semana. Generados por [Israel Blancas @iblancasa](https://github.com/iblancasa/) [(Twitter)](https://twitter.com/iblancasa).
+La liste d'utilisateurs est clasée par nombre de contributions publiques. Pour apparaître dans ce classement il faut avoir au moins un dépôt public et un abonné.
 
-Las plantillas se encuentran en [este repositorio](https://github.com/iblancasa/GH-Spanish-Ranking), utilizando la biblioteca [GitHubCity](https://github.com/iblancasa/GitHubCity). Los resultados están disponibles en MD y en JSON.
+Données disponibles sous licence [Creative Commons 4.0 Attribution International](https://creativecommons.org/licenses/by/4.0/).
 
-Licencia [Creative Commons](https://creativecommons.org/licenses/by/4.0/).
-
-| Puesto   |  Usuario  | Contrib. pub | Contrib. priv |Repos| Followers | Desde |  Avatar  |
-|----------|-----------|--------------|---------------|-----|-----------|-------|----------|
+| Ordre | Utilisateur | Contrib. pub | Contrib. priv | Dépôts | Abonnés | Depuis | Avatar |
+|-------|-------------|--------------|---------------|--------|---------|--------|--------|
 {{#users}}
 |{{position}}|[{{name}}](https://github.com/{{name}})|{{public}}|{{private}}|{{repositories}}|{{followers}}|{{join}}|![{{name}}]({{avatar}})|
 {{/users}}

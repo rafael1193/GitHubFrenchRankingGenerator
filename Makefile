@@ -13,8 +13,9 @@ france-region:
 		-r "France"
 
 # Occitanie
-occitanie: toulouse montpellier nimes
+occitanie: toulouse montpellier
 	$(REG) -c $(GEN)$@/toulouse.json \
+		-c $(GEN)$@/montpellier.json \
 		-o $(GEN)$@/$@ \
 		-r "Occitanie"
 
@@ -26,6 +27,3 @@ montpellier:
 	mkdir -p $(GEN)occitanie
 	$(EXEC) $(CONF)occitanie/montpellier.json $(GEN)occitanie/montpellier
 
-nimes:	
-	mkdir -p $(GEN)occitanie
-	$(EXEC) $(CONF)occitanie/nimes.json $(GEN)occitanie/nimes

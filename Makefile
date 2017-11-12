@@ -5,10 +5,12 @@ REG=$(PYTHON) region.py
 CONF=configuration/
 GEN=generated/
 
-all: occitanie
+all: occitanie auvergne-rhone-alpes paca
 
 france-region:
 	$(REG) -c $(GEN)occitanie/occitanie.json \
+		-c $(GEN)auvergne-rhone-alpes/auvergne-rhone-alpes.json \
+		-c $(GEN)paca/paca.json \
 		-o $(GEN)$@ \
 		-r "France"
 

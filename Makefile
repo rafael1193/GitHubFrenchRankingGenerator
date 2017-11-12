@@ -42,3 +42,23 @@ grenoble:
 	mkdir -p $(GEN)auvergne-rhone-alpes
 	$(EXEC) $(CONF)auvergne-rhone-alpes/grenoble.json $(GEN)auvergne-rhone-alpes/grenoble
 
+# PACA
+paca: aix-en-provence marseille nice
+	$(REG) -c $(GEN)$@/aix-en-provence.json \
+		-c $(GEN)$@/marseille.json \
+		-c $(GEN)$@/nice.json \
+		-o $(GEN)$@/$@ \
+		-r "Provence-Alpes-Côte-d'Azur"
+
+aix-en-provence:
+	mkdir -p $(GEN)paca
+	$(EXEC) $(CONF)paca/aix-en-provence.json $(GEN)paca/aix-en-provence
+
+marseille:
+	mkdir -p $(GEN)paca
+	$(EXEC) $(CONF)paca/marseille.json $(GEN)paca/marseille
+
+nice:
+	mkdir -p $(GEN)paca
+	$(EXEC) $(CONF)paca/nice.json $(GEN)paca/nice
+

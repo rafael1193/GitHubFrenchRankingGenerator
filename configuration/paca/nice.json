@@ -1,0 +1,15 @@
+{
+    "excludedLocations": [],
+    "excludedUsers": [],
+    "intervals": [
+        [
+            "2008-01-01",
+            "2017-11-12"
+        ]
+    ],
+    "last_date": "2017-11-12",
+    "locations": [
+        "Nice"
+    ],
+    "name": "Nice"
+}

@@ -8,4 +8,10 @@ before_install:
 script:
   - make
 after_success:
-  - echo "I should be pushing the results in the future..."
+  - git config --global user.email "rafael1193@zoho.com"
+  - git config --global user.name "Rafael Bailon-Ruiz"
+  - cd generated
+  - git remote
+  - git add -A .
+  - git commit -m "Update rankings"
+  - git push "https://rafael1193:${GH_ACCESS}@github.com/rafael1193/GitHubRankingsFrance.git" master > /dev/null 2>&1

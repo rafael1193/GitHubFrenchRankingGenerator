@@ -27,3 +27,18 @@ montpellier:
 	mkdir -p $(GEN)occitanie
 	$(EXEC) $(CONF)occitanie/montpellier.json $(GEN)occitanie/montpellier
 
+# Auvergne-Rhône-Alpes
+auvergne-rhone-alpes: lyon grenoble
+	$(REG) -c $(GEN)$@/lyon.json \
+		-c $(GEN)$@/grenoble.json \
+		-o $(GEN)$@/$@ \
+		-r "Auvergne-Rhône-Alpes"
+
+lyon:
+	mkdir -p $(GEN)auvergne-rhone-alpes
+	$(EXEC) $(CONF)auvergne-rhone-alpes/lyon.json $(GEN)auvergne-rhone-alpes/lyon
+
+grenoble:
+	mkdir -p $(GEN)auvergne-rhone-alpes
+	$(EXEC) $(CONF)auvergne-rhone-alpes/grenoble.json $(GEN)auvergne-rhone-alpes/grenoble
+
